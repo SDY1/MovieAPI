@@ -8,5 +8,5 @@ def callTemperature():
         html_doc = response.text
         soup = BeautifulSoup(html_doc, 'html.parser')
         target = soup.select_one(".todaytemp")
-        temperature = target.text
+        temperature = {"temp":target.text}
         return temperature
